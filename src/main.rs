@@ -189,6 +189,14 @@ fn warn_apply(args: &Flags) {
 async fn main_impl(args: Flags) -> anyhow::Result<()> {
     let start = std::time::Instant::now();
 
+    if args.apply {
+        let confirmation = dialoguer::Confirm::new()
+            .with_prompt("Are you sure you want to automatically apply changes? No backup of the previous titles will be done outside of the logs.")
+            .default(false)
+            .interact()
+            ?;
+        anyhow::ensure!(confirmation, "User aborted");
+    }
     warn_apply(&args);
 
     info!("Retrieving documents from paperless");

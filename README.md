@@ -22,7 +22,7 @@ See https://c.pgdm.ch/notes/paperless-llm/
 1. Launch a `llama.cpp` server:
 
    ```
-   $ llama-server -m gemma-3-12b-it-Q5_K_M.gguf --port 8080 -ngl 1000 -c 6000 -t 12 --batch-size 512 -fa --n-predict 100 --no-context-shift --parallel 1 -2501 --metrics --host 0.0.0.0
+   $ llama-server -m gemma-3-12b-it-Q5_K_M.gguf --port 8080 -ngl 1000 -c 6000 -t 12 --batch-size 512 -fa --n-predict 100 --no-context-shift --parallel 1 --metrics --host 0.0.0.0
    ```
 
    This should fit on 12 GB of VRAM; adjust `-ngl` (CPU offload) if not. If you have more memory available, increase the context size (`-c`) and the parallelism (`((parallel))`).
