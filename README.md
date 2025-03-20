@@ -2,6 +2,8 @@
 
 Populate [`paperless-ngx`](https://docs.paperless-ngx.com/) document metadata (for now title and monetary amount if relevant) using local LLMs.
 
+![Screenshot](screenshot.webp)
+
 See https://c.pgdm.ch/notes/paperless-llm/
 
 ## Installation
