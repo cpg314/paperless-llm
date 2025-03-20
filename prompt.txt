@@ -1,0 +1,8 @@
+Provide a title and amount (CURRENCY, if relevant) for the text. Respect the following rules for the title:
+- Concise (no unnecessary words)
+- No markup. 
+- In English, even if the text is in another language
+- No names of persons or companies
+- Max 5 words
+Output the title on line 1, the amount (float or - if there is none) on line 2.
+Text:

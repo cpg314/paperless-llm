@@ -1,0 +1,11 @@
+root ::= string linebreak monetaryAmount
+
+string ::= char+
+char ::= [^\n\r]
+
+linebreak ::= "\n" | "\r\n" | "\r"
+
+monetaryAmount ::= amount | "-"
+amount ::= digits "." decimalPart
+digits ::= [0-9]+
+decimalPart ::= [0-9]{2}
